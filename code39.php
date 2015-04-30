@@ -24,7 +24,7 @@ class Code39 {
 	 */
 	function __construct($text){
 		$this->setText($text);
-                $this->fontFilePath = dirname(__FILE__) . $this->fontFileName; 
+                $this->fontFilePath = dirname(__FILE__) . '/' . $this->fontFileName; 
 	}
 
 	/**
