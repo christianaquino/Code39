@@ -33,8 +33,8 @@ class Code39 {
 	 * @param string $text
 	 */
 	public function setText($text){
-		$regla = '^[A-Z0-9 +/% \s\.\$\-]*$';
-		if (ereg($regla,$text)) {
+		$pattern = '^[A-Z0-9 +/% \s\.\$\-]*$';
+		if (ereg($pattern,$text)) {
 			$this->text = '*'.$text.'*';
 		}else {
 			die('Only Code39 valid chars (A-Z, 0-9, whitespace and -.$/+%)');
