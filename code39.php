@@ -1,13 +1,13 @@
 <?php
 /**
- * This class generates a valid Cod39 barcode png image.
+ * This class generates a valid Code39 barcode png image.
  * It require GD 2 lib and  Free_3_of_9_Extended_Regular font installed in your system (or .ttf file)
  * 
  * @see http://en.wikipedia.org/wiki/Code_39
  * @author Christian Aquino <christian.a77@gmail.com>
  * @version 1.0
  */
-class Cod39 {
+class Code39 {
 	private $fontFilePath = 'Free_3_of_9_Extended_Regular.ttf';
 	private $barcodeSize = 30;
 	private $text = '**';
@@ -49,7 +49,7 @@ class Cod39 {
 	}
 
 	/**
-	 * True if you want to see the text below the barcode image
+	 * Set it to True if you want to see the text below the barcode image
 	 *
 	 * @param bool $displayText
 	 */
@@ -129,4 +129,3 @@ class Cod39 {
 		}
 	}
 }
-?>
