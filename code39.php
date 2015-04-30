@@ -1,17 +1,18 @@
 <?php
 /**
  * This class generates a valid Code39 barcode png image.
- * It require GD 2 lib and  Free_3_of_9_Extended_Regular font installed in your system (or .ttf file)
+ * It require GD 2 lib and  Free_3_of_9_Extended_Regular
  * 
  * @see http://en.wikipedia.org/wiki/Code_39
  * @author Christian Aquino <christian.a77@gmail.com>
  * @version 1.0
  */
 class Code39 {
-	private $fontFilePath = './Free_3_of_9_Extended_Regular.ttf';
+	private $fontFilePath; 
+        private $fontFileName = 'Free_3_of_9_Extended_Regular.ttf';
 	private $barcodeSize = 30;
 	private $text = '**';
-	private $displayText = true;
+	private $displayText = false;
 	private $image = null;
 	private $textFontSize = 3;
 	private $filename = null;
@@ -23,6 +24,7 @@ class Code39 {
 	 */
 	function __construct($text){
 		$this->setText($text);
+                $this->fontFilePath = dirname(__FILE__) . $this->fontFileName; 
 	}
 
 	/**
