@@ -115,8 +115,8 @@ class Cod39 {
 		imagettftext($this->image, $this->barcodeSize, 0, 2, $this->barcodeSize, $fontColor, $this->fontFilePath, $this->text);
 
 		if($this->displayText){
-			//Calculo la posicion del texto que se va a mostrar debajo del codigo de barras
-			$x = round($w/2) - round($txtlong / 2)*(5+$this->textFontSize); // Posicion x
+			//text position
+			$x = round($w/2) - round($txtlong / 2)*(5+$this->textFontSize);
 			$y = $this->barcodeSize + 1;
 			imageString($this->image,$this->textFontSize,$x,$y,$this->text,$fontColor);
 		}
