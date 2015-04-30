@@ -8,7 +8,7 @@
  * @version 1.0
  */
 class Code39 {
-	private $fontFilePath = 'Free_3_of_9_Extended_Regular.ttf';
+	private $fontFilePath = './Free_3_of_9_Extended_Regular.ttf';
 	private $barcodeSize = 30;
 	private $text = '**';
 	private $displayText = true;
@@ -35,7 +35,7 @@ class Code39 {
 		if (ereg($regla,$text)) {
 			$this->text = '*'.$text.'*';
 		}else {
-			die('Solo se permite: A-Z, 0-9, espacio y -.$/+%');
+			die('Only Code39 valid chars (A-Z, 0-9, whitespace and -.$/+%)');
 		}
 	}
 
@@ -112,7 +112,8 @@ class Code39 {
 		$fontColor  = imagecolorallocate($this->image, 0, 0, 0);
 		imagefilledrectangle($this->image, 0, 0, $w-1, $h-1, $backgroudColor);
 
-		imagettftext($this->image, $this->barcodeSize, 0, 2, $this->barcodeSize, $fontColor, $this->fontFilePath, $this->text);
+		imagettftext($this->image, $this->barcodeSize, 0, 2, $this->barcodeSize, 
+                        $fontColor, $this->fontFilePath, $this->text);
 
 		if($this->displayText){
 			//text position
