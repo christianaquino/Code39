@@ -1,7 +1,7 @@
 <?php
 /**
  * This class generates a valid Code39 barcode png image.
- * It require GD 2 lib and  Free_3_of_9_Extended_Regular
+ * It require GD 2 lib and Free_3_of_9_Extended_Regular
  * 
  * @see http://en.wikipedia.org/wiki/Code_39
  * @author Christian Aquino <christian.a77@gmail.com>
@@ -9,8 +9,8 @@
  */
 class Code39 {
 	private $fontFilePath; 
-        private $fontFileName = 'Free_3_of_9_Extended_Regular.ttf';
-	private $barcodeSize = 30;
+    private $fontFileName = 'Free_3_of_9_Extended_Regular.ttf';
+	private $barcodeSize = 40;
 	private $text = '**';
 	private $displayText = false;
 	private $image = null;
@@ -35,7 +35,7 @@ class Code39 {
 	public function setText($text){
 		$pattern = '^[A-Z0-9 +/% \s\.\$\-]*$';
 		if (ereg($pattern,$text)) {
-			$this->text = '*'.$text.'*';
+			$this->text = '*' . $text . '*';
 		}else {
 			die('Only Code39 valid chars (A-Z, 0-9, whitespace and -.$/+%)');
 		}
