@@ -30,7 +30,7 @@ $code39->setBarcodeSize(50);
 ```
 
 ## setDisplayText
-Set to TRUE if you want to see the text below the barcode
+Set to TRUE if you want to display the text below the barcode
 
 ```PHP
 $code39 = new Code39('ABC 123');
@@ -40,14 +40,14 @@ echo $code39->generateBarcode();
 In this example the image will include \*ABC 123\* below the barcode
 
 ## setFontFilePath
-Default .ttf font file is placed in the same folder than code39.php file, if you want to move them to another folder or just use another TrueType font file, you must provide via setFontFilePath method the full path to the file. 
+Default .ttf font file is placed into the same folder than code39.php file, if you want to move them to another folder or just use another TrueType font file, you must provide the full path to the file via setFontFilePath method. 
 
 ```PHP
 $code39->setDiaplayText('/full/path/to/true/type/font/file.ttf');
 ```
 
 ## setFileName
-If you want to save the image, just use the setFileName method to provide the full path to the generated image. If you provide only a file name, image will be saved in the same folder than code39.class file.
+If you want to save the image, just use the setFileName method to provide the full path to the generated image. If you provide only a file name, image will be saved in the same folder than code39.php file.
 
 ```PHP
 $fileName = 'IMG_' . time() . '.png';
