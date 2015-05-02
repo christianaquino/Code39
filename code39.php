@@ -9,7 +9,7 @@
  */
 class Code39 {
 	private $fontFilePath; 
-    private $fontFileName = 'Free_3_of_9_Extended_Regular.ttf';
+        private $fontFileName = 'Free_3_of_9_Extended_Regular.ttf';
 	private $barcodeSize = 40;
 	private $text = '**';
 	private $displayText = false;
