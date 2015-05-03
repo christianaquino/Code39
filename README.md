@@ -9,7 +9,7 @@ PHP class for Code39 barcode creation
 include 'Code39/code39.php';
 
 $code39 = new Code39('ABC 123');
-echo $code39->generateBarcode();
+$code39->generateBarcode();
 ```
 
 # More options
