@@ -35,7 +35,7 @@ Set to TRUE if you want to display the text below the barcode
 ```PHP
 $code39 = new Code39('ABC 123');
 $code39->setDiaplayText(true);
-echo $code39->generateBarcode();
+$code39->generateBarcode();
 ```
 In this example the image will include \*ABC 123\* below the barcode
 
