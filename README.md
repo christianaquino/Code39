@@ -30,7 +30,7 @@ $code39->setBarcodeSize(50);
 ```
 
 ## setDisplayText
-Set to TRUE if you want to display the text below the barcode
+Set TRUE if you want to display the text below the barcode
 
 ```PHP
 $code39 = new Code39('ABC 123');
